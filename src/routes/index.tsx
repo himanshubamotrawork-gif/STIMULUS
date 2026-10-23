@@ -467,7 +467,7 @@ function Footer() {
               <span className="text-lg font-bold tracking-tight">MovPerk</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
-              Helping households discover their next step toward food assistance.
+              Independent food-support resource website
             </p>
           </div>
 
@@ -493,12 +493,13 @@ function Footer() {
 
         <div className="mt-10 border-t border-white/15 pt-6">
           <p className="text-xs leading-relaxed text-white/60">
-            MovPerk is an independent resource guide and is not affiliated with, endorsed by,
-            or acting on behalf of any government agency. Program names are provided for
-            information only. Eligibility decisions are made solely by official state
-            agencies; final rules and amounts may vary by state and circumstance. This page is
-            informational and does not constitute legal, financial, or benefits advice.
+            MovPerk is not a government website and is not affiliated with or endorsed by
+            USDA, SNAP, or any state agency. Information on this website is provided for
+            general informational purposes. Completing a questionnaire does not mean you are
+            approved, eligible, or owed benefits, and does not guarantee any specific amount
+            of assistance.
           </p>
+          <p className="mt-4 text-xs text-white/60">© 2026 MovPerk</p>
         </div>
       </div>
     </footer>
@@ -513,10 +514,9 @@ function Index() {
       <Header />
       <main>
         <Hero />
-        <HowItWorks />
+        <Questions />
         <About />
         <Options />
-        <Faqs />
       </main>
       <Footer />
     </div>
