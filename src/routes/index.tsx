@@ -77,9 +77,8 @@ function ChevronDown({ className }: { className?: string }) {
 /* ---------- Header ---------- */
 
 const navLinks = [
-  { label: "How It Works", href: "#how-it-works" },
   { label: "About Food Assistance", href: "#about" },
-  { label: "FAQs", href: "#faqs" },
+  { label: "Common Questions", href: "#questions" },
 ];
 
 function Header() {
@@ -195,10 +194,10 @@ function Hero() {
               </svg>
             </a>
             <a
-              href="#how-it-works"
+              href="#questions"
               className="text-sm font-semibold text-forest underline decoration-forest/30 decoration-2 underline-offset-4 transition-colors hover:decoration-forest"
             >
-              Learn how it works
+              See common questions
             </a>
           </div>
 
@@ -227,49 +226,76 @@ function Hero() {
   );
 }
 
-/* ---------- How It Works ---------- */
+/* ---------- Common Questions ---------- */
 
-const steps = [
+const questions = [
   {
-    title: "Learn the basics",
-    text: "Get a plain-language overview of food assistance programs and what they generally help with.",
+    q: "What kind of food assistance could I look into?",
+    a: "Depending on your situation, there may be different food-assistance resources worth exploring. The questionnaire can help you start organizing the information needed to explore available options.",
   },
   {
-    title: "See what may fit",
-    text: "Review the factors programs commonly consider — like household size and income — at your own pace.",
+    q: "Could my household qualify for a resource?",
+    a: "Eligibility varies by program and household circumstances. Use the questionnaire as a starting point; completing it does not determine or guarantee eligibility.",
   },
   {
-    title: "Take your next step",
-    text: "Follow a clear path to official applications and local resources when you're ready.",
+    q: "Where should I start looking?",
+    a: "Start by sharing the basic information requested in the online questionnaire. You can then review the guidance and resources presented for your situation.",
+  },
+  {
+    q: "Can I get a more organized guide?",
+    a: "Yes. The linked experience is designed to provide a more organized starting point based on the information you submit.",
   },
 ];
 
-function HowItWorks() {
+function Questions() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
-    <section id="how-it-works" className="scroll-mt-20 py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-forest">How It Works</p>
+    <section id="questions" className="scroll-mt-20 py-16 md:py-24">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <div className="text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-forest">
+            Common Questions
+          </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Three simple steps, zero pressure
+            Start with the questions you already have
           </h2>
-          <p className="mt-3 text-muted-foreground">
-            MovPerk is a starting point, not an application. We help you understand your
-            options before you ever fill out a form.
+          <p className="mx-auto mt-3 max-w-xl leading-relaxed text-muted-foreground">
+            When you're looking for food support, the hardest part can be knowing what to
+            search for first. This is designed to make that first step easier.
           </p>
         </div>
 
-        <ol className="mt-10 grid gap-5 md:grid-cols-3">
-          {steps.map((step, i) => (
-            <li key={step.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-sm font-bold text-accent-foreground">
-                {i + 1}
-              </span>
-              <h3 className="mt-4 text-lg font-semibold text-foreground">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.text}</p>
-            </li>
-          ))}
-        </ol>
+        <div className="mt-10 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-card shadow-soft">
+          {questions.map((item, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div key={item.q}>
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  className="flex w-full items-center gap-4 px-6 py-5 text-left text-sm font-semibold text-foreground transition-colors hover:bg-muted/60 sm:text-base"
+                >
+                  <span className="shrink-0 font-mono text-xs font-bold text-muted-foreground">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="flex-1">{item.q}</span>
+                  <ChevronDown
+                    className={`h-5 w-5 shrink-0 text-forest transition-transform duration-200 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {isOpen && (
+                  <p className="pb-5 pl-14 pr-6 text-sm leading-relaxed text-muted-foreground">
+                    {item.a}
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
