@@ -5,13 +5,13 @@ import heroIllustration from "@/assets/hero-illustration.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FoodPath — Explore Food Assistance Options" },
+      { title: "MovPerk — Explore Food Assistance Options" },
       {
         name: "description",
         content:
           "Answer a few simple questions to explore food assistance programs and resources that may be relevant to your household.",
       },
-      { property: "og:title", content: "FoodPath — Explore Food Assistance Options" },
+      { property: "og:title", content: "MovPerk — Explore Food Assistance Options" },
       {
         property: "og:description",
         content:
@@ -46,7 +46,7 @@ function Logo() {
       <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-soft">
         <LeafIcon className="h-5 w-5" />
       </span>
-      <span className="text-lg font-bold tracking-tight text-foreground">FoodPath</span>
+      <span className="text-lg font-bold tracking-tight text-foreground">MovPerk</span>
     </a>
   );
 }
@@ -254,7 +254,7 @@ function HowItWorks() {
             Three simple steps, zero pressure
           </h2>
           <p className="mt-3 text-muted-foreground">
-            FoodPath is a starting point, not an application. We help you understand your
+            MovPerk is a starting point, not an application. We help you understand your
             options before you ever fill out a form.
           </p>
         </div>
@@ -399,7 +399,7 @@ function Options() {
             <div className="flex flex-col justify-center gap-5 bg-mint/50 p-8 sm:p-12">
               <h3 className="text-xl font-semibold text-foreground">Ready for the real thing?</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Applications are handled by your state, not by FoodPath. The official USDA
+                Applications are handled by your state, not by MovPerk. The official USDA
                 state directory takes you straight to your state's SNAP application and
                 contact information.
               </p>
@@ -429,7 +429,7 @@ function Options() {
 
 const faqs = [
   {
-    q: "Does FoodPath cost anything?",
+    q: "Does MovPerk cost anything?",
     a: "No. Exploring information here is completely free, and we don't ask for payment details anywhere on the site.",
   },
   {
@@ -438,7 +438,7 @@ const faqs = [
   },
   {
     q: "Is this a government website?",
-    a: "No. FoodPath is an independent guide. We explain programs in plain language and link you to official government resources when you're ready to apply.",
+    a: "No. MovPerk is an independent guide. We explain programs in plain language and link you to official government resources when you're ready to apply.",
   },
   {
     q: "Will checking this page affect anything officially?",
@@ -511,7 +511,7 @@ function Footer() {
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/10">
                 <LeafIcon className="h-5 w-5" />
               </span>
-              <span className="text-lg font-bold tracking-tight">FoodPath</span>
+              <span className="text-lg font-bold tracking-tight">MovPerk</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
               Helping households discover their next step toward food assistance.
@@ -540,7 +540,7 @@ function Footer() {
 
         <div className="mt-10 border-t border-white/15 pt-6">
           <p className="text-xs leading-relaxed text-white/60">
-            FoodPath is an independent resource guide and is not affiliated with, endorsed by,
+            MovPerk is an independent resource guide and is not affiliated with, endorsed by,
             or acting on behalf of any government agency. Program names are provided for
             information only. Eligibility decisions are made solely by official state
             agencies; final rules and amounts may vary by state and circumstance. This page is
