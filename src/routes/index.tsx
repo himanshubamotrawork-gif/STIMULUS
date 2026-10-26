@@ -300,150 +300,34 @@ function Questions() {
   );
 }
 
-/* ---------- About Food Assistance ---------- */
+/* ---------- Next Step (yellow CTA block) ---------- */
 
-const programs = [
-  {
-    name: "SNAP",
-    alsoKnownAs: "Supplemental Nutrition Assistance Program",
-    text: "Monthly benefits on a card you can use to buy groceries at most stores and farmers markets. Often called food stamps.",
-  },
-  {
-    name: "WIC",
-    alsoKnownAs: "Women, Infants & Children",
-    text: "Nutrition support for people who are pregnant or caregiving, and for young children up to age five.",
-  },
-  {
-    name: "School meals",
-    alsoKnownAs: "National School Lunch & Breakfast",
-    text: "Free or reduced-price meals for school-age children, based on household income.",
-  },
-  {
-    name: "Local food banks",
-    alsoKnownAs: "Community food resources",
-    text: "Free groceries and meals from community organizations, usually with no application at all.",
-  },
-];
-
-function About() {
+function NextStep() {
   return (
-    <section id="about" className="scroll-mt-20 bg-mint/40 py-16 md:py-24">
+    <section id="start" className="scroll-mt-20 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-forest">
-              About Food Assistance
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              What these programs actually do
-            </h2>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              Food assistance programs are run by states with federal funding. They exist to
-              help households keep groceries on the table — and millions of eligible people
-              never apply, often because the process feels confusing or intimidating.
-            </p>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              Reaching out to a program does not affect your credit, your immigration status
-              on its own, or your standing with any employer. The first step is simply
-              learning what's out there.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {programs.map((p) => (
-              <article key={p.name} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-                <h3 className="text-lg font-semibold text-forest">{p.name}</h3>
-                <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                  {p.alsoKnownAs}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------- Check My Options (CTA target) ---------- */
-
-const factors = [
-  {
-    title: "Household size",
-    text: "Programs look at how many people you buy and prepare food with — not just who lives at your address.",
-  },
-  {
-    title: "Household income",
-    text: "Gross and net monthly income, including wages and benefits, are compared to program limits.",
-  },
-  {
-    title: "Expenses",
-    text: "Rent, utilities, childcare and medical costs can raise the amount a household may receive.",
-  },
-  {
-    title: "Your state",
-    text: "Each state runs its own application with its own process and limits.",
-  },
-];
-
-function Options() {
-  return (
-    <section id="options" className="scroll-mt-20 py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-lift">
-          <div className="grid lg:grid-cols-[1.1fr_1fr]">
-            <div className="p-8 sm:p-12">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-forest">
-                Check My Options
-              </p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                What programs usually look at
-              </h2>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                Every situation is different, but these are the factors most food assistance
-                programs consider. Seeing them up front helps you know what to have handy —
-                nothing more.
-              </p>
-
-              <ul className="mt-8 grid gap-5 sm:grid-cols-2">
-                {factors.map((f) => (
-                  <li key={f.title}>
-                    <h3 className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                      <CheckIcon className="h-5 w-5 shrink-0 text-forest" />
-                      {f.title}
-                    </h3>
-                    <p className="mt-1.5 pl-7 text-sm leading-relaxed text-muted-foreground">
-                      {f.text}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex flex-col justify-center gap-5 bg-mint/50 p-8 sm:p-12">
-              <h3 className="text-xl font-semibold text-foreground">Ready for the real thing?</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                Applications are handled by your state, not by MovPerk. The official USDA
-                state directory takes you straight to your state's SNAP application and
-                contact information.
-              </p>
-              <a
-                href="https://www.fns.usda.gov/snap/state-directory"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:bg-forest-deep"
-              >
-                Go to your state's official site
-                <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
-                  <path d="M6 14 14 6m0 0H8m6 0v6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-              <p className="text-xs text-muted-foreground">
-                Opens the official USDA Food and Nutrition Service website.
-              </p>
-            </div>
-          </div>
+        <div className="rounded-3xl bg-accent px-6 py-14 text-center shadow-lift sm:px-12 md:py-20">
+          <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Your next step can be surprisingly simple.
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl leading-relaxed text-accent-foreground/80">
+            Take a moment to answer the questions and explore food-assistance
+            resources that may be relevant to your situation.
+          </p>
+          <a
+            href="https://www.fns.usda.gov/snap/state-directory"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground px-8 py-4 text-base font-semibold text-background shadow-lift transition-all hover:-translate-y-0.5"
+          >
+            Check Now
+            <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
+              <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+          <p className="mt-5 text-xs text-accent-foreground/70">
+            Opens the official USDA Food and Nutrition Service website.
+          </p>
         </div>
       </div>
     </section>
