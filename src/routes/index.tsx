@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "A free, private way to explore food assistance programs and find your next step.",
+          "A free way to explore food assistance programs and find your next step.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -172,7 +172,7 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:pb-24 md:pt-20 lg:grid-cols-2">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-forest">
-            Food Assistance Resource Guide
+            Food Assistance Resource 
           </p>
           <h1 className="mt-4 text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl">
             Make Your Next Grocery Step a&nbsp;Little Easier.
@@ -377,7 +377,7 @@ function Footer() {
               <span className="text-lg font-bold tracking-tight">MovPerk</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
-              Independent food-support resource website
+             food-support resource website
             </p>
           </div>
 
