@@ -77,7 +77,6 @@ function ChevronDown({ className }: { className?: string }) {
 /* ---------- Header ---------- */
 
 const navLinks = [
-  { label: "About Food Assistance", href: "#about" },
   { label: "Common Questions", href: "#questions" },
 ];
 
@@ -100,7 +99,7 @@ function Header() {
             </a>
           ))}
           <a
-            href="#options"
+            href="#start"
             className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-colors hover:bg-forest-deep"
           >
             Check My Options
@@ -110,7 +109,7 @@ function Header() {
         {/* Mobile */}
         <div className="flex items-center gap-2 md:hidden">
           <a
-            href="#options"
+            href="#start"
             className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
           >
             Check My Options
@@ -185,7 +184,7 @@ function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-5">
             <a
-              href="#options"
+              href="#start"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lift transition-all hover:-translate-y-0.5 hover:bg-forest-deep"
             >
               Explore My Options
@@ -261,8 +260,8 @@ function Questions() {
             Start with the questions you already have
           </h2>
           <p className="mx-auto mt-3 max-w-xl leading-relaxed text-muted-foreground">
-            When you're looking for food support, the hardest part can be knowing what to
-            search for first. This is designed to make that first step easier.
+            Quick answers to the questions people ask most when they start looking
+            into food assistance.
           </p>
         </div>
 
