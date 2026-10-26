@@ -360,7 +360,7 @@ function Footer() {
                 {l.label}
               </a>
             ))}
-            <a href="#options" className="text-white/80 transition-colors hover:text-white">
+            <a href="#start" className="text-white/80 transition-colors hover:text-white">
               Check My Options
             </a>
             <a
@@ -398,8 +398,7 @@ function Index() {
       <main>
         <Hero />
         <Questions />
-        <About />
-        <Options />
+        <NextStep />
       </main>
       <Footer />
     </div>
