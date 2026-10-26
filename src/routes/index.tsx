@@ -302,32 +302,59 @@ function Questions() {
 
 /* ---------- Next Step (yellow CTA block) ---------- */
 
+const steps = [
+  {
+    number: "01",
+    title: "Answer",
+    text: "Answer a short set of simple questions about your household.",
+  },
+  {
+    number: "02",
+    title: "Explore",
+    text: "Explore food-assistance resources that may fit the information you provide.",
+  },
+  {
+    number: "03",
+    title: "Review",
+    text: "Review the guidance and see what your next step could be.",
+  },
+];
+
 function NextStep() {
   return (
     <section id="start" className="scroll-mt-20 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="rounded-3xl bg-accent px-6 py-14 text-center shadow-lift sm:px-12 md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Your next step can be surprisingly simple.
+            3 steps. Simple and easy.
           </h2>
           <p className="mx-auto mt-4 max-w-xl leading-relaxed text-accent-foreground/80">
-            Take a moment to answer the questions and explore food-assistance
-            resources that may be relevant to your situation.
+            Getting started takes just a few minutes — here's how it works.
           </p>
+
+          <ol className="mx-auto mt-10 grid max-w-4xl gap-6 text-left sm:grid-cols-3">
+            {steps.map((s) => (
+              <li key={s.number} className="rounded-2xl bg-background/50 p-5">
+                <span className="font-mono text-xs font-bold text-accent-foreground/70">
+                  {s.number}
+                </span>
+                <h3 className="mt-1 text-lg font-semibold text-foreground">{s.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-accent-foreground/80">
+                  {s.text}
+                </p>
+              </li>
+            ))}
+          </ol>
+
           <a
-            href="https://www.fns.usda.gov/snap/state-directory"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground px-8 py-4 text-base font-semibold text-background shadow-lift transition-all hover:-translate-y-0.5"
+            href="#"
+            className="mt-10 inline-flex items-center gap-2 rounded-full bg-foreground px-8 py-4 text-base font-semibold text-background shadow-lift transition-all hover:-translate-y-0.5"
           >
             Check Now
             <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
               <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </a>
-          <p className="mt-5 text-xs text-accent-foreground/70">
-            Opens the official USDA Food and Nutrition Service website.
-          </p>
         </div>
       </div>
     </section>
